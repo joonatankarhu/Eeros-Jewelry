@@ -10,11 +10,52 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&family=Roboto:ital,wght@0,300;0,400;1,500&display=swap" rel="stylesheet">
+    <!-- Importing Font Awesome Icons -->
+    <script src="https://kit.fontawesome.com/382e84d0f6.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <script src="https://unpkg.com/vue@3"></script>
 
-    <div id="app">{{ product }}</div>
+    <div id="app">
+
+        <div class="nav">
+            <div class="mobile-nav">
+                <button class="nav-toggle">
+                    <i class="fa-solid fa-bars mobile-nav-icon" aria-hidden="true"></i>
+                </button>
+            </div>
+            <!-- links -->
+            <ul class="links">
+                <li>
+                <a href="index.html">home</a>
+                </li>
+                <li>
+                <a href="about.html">about</a>
+                </li>
+                <li>
+                <a href="projects.html">projects</a>
+                </li>
+                <li>
+                <a href="contact.html">contact</a>
+                </li>
+            </ul>
+        </div>
+
+
+        <div class="hero">
+            <h1>Eero's</h1>
+            <p>Jewellery Shop</p>
+            <div class="hero-btn">
+                <a href="#">Contact</a>
+            </div>
+        </div>
+
+
+
+
+
+
+    </div>
 
     <!-- Import App -->
     <script src="./main.js"></script>
@@ -23,5 +64,6 @@
     <script>
         const mountedApp = app.mount('#app')
     </script>
+    <script src="script.js"></script>
 </body>
 </html>
