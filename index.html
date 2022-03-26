@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <title>Home | Eero's Jewelery</title>
     <link rel="stylesheet" href="style.css">
     <!-- Importing Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -24,19 +24,19 @@
                     <i class="fa-solid fa-bars mobile-nav-icon" aria-hidden="true"></i>
                 </button>
             </div>
-            <!-- links -->
+            <!-- mobile nav links -->
             <ul class="links">
                 <li>
-                <a href="index.html">home</a>
+                <a href="index.html">Home</a>
                 </li>
                 <li>
-                <a href="about.html">about</a>
+                <a href="about.html">Products</a>
                 </li>
                 <li>
-                <a href="projects.html">projects</a>
+                <a href="projects.html">Order</a>
                 </li>
-                <li>
-                <a href="contact.html">contact</a>
+                <li class="border-bottom">
+                <a href="contact.html">Contact</a>
                 </li>
             </ul>
         </div>
@@ -44,16 +44,67 @@
 
         <div class="hero">
             <h1>Eero's</h1>
-            <p>Jewellery Shop</p>
+            <p>Jewelery</p>
             <div class="hero-btn">
                 <a href="#">Contact</a>
+            </div>
+            <div class="hero-image">
+                <img id="bigImage" src="./assets/images/products/header-image.jpg" alt="">
             </div>
         </div>
 
 
+        <div class="projects-title">
+            <h2>Work</h2>
+            <p>Samples</p>
+        </div>
+
+        <div class="product-container">
+            <div class="product-item">
+                <div class="product-image">
+                    <img src="./assets/images/products/blue_sapphire_ring.jpg" alt="">
+                </div>
+                <div class="product-description">
+                    <h3>Sapphire Ring</h3>
+                    <p>Silver Jewellery with a Blue Stone</p>
+                </div>
+                <div class="product-data">
+                    <div>
+                        <h4>Material</h4>
+                        <p>Silver</p>
+                    </div>
+                    <div class="product-data-align-right">
+                        <h4>Price</h4>
+                        <p>250€</p>
+                    </div>
+                </div>
+            </div>
+        </div>
 
 
+        <div class="mobile-contact-section">
+            <!-- Contact Section -->
+            <div class="mobile-contact-header">
+                <h2>Contact</h2>
+                <p>To make an order or to contact me, you will find the order form and the contact email below</p>
+            </div>
+            <div class="mobile-contact-info">
+                <h5>Email address</h5>
+                <p>eeros_jewelery@outlook.com</p>
+            </div>
+        </div>
 
+
+        <div class="mobile-order-form">
+            <form action="#">
+
+            </form>
+        </div>
+
+        <div class="mobile-footer">
+            <h3>Website Created by<br>Joonatan Karhu</h3>
+            <p>Copyrights 2022</p>
+        </div>
 
     </div>
 
@@ -64,6 +115,7 @@
     <script>
         const mountedApp = app.mount('#app')
     </script>
+    <script src="carosel.js"></script>
     <script src="script.js"></script>
 </body>
 </html>

@@ -8,8 +8,11 @@
 }
 
 :root {
-    --dark_gray: rgb(39, 39, 39);
-    --dark_black: black;
+    --white-header-text: rgba(255, 255, 255, 0.88);
+    --dark_text: rgba(255, 255, 255, 0.25);
+    --dark_gray_background: #232323;
+    --light_gray_text: #B4B4B4;
+    --dark_gray_text: rgb(44, 44, 44);
 }
 
 html {
@@ -22,6 +25,59 @@ body {
     font-family: 'Roboto', 'Open Sans', sans-serif;
 }
 
+ul {
+    list-style-type: none;
+  }
+  a {
+    text-decoration: none;
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    text-transform: capitalize;
+    line-height: 1.25;
+    margin-bottom: 0.75rem;
+  }
+  h1 {
+    font-size: 3rem;
+  }
+  h2 {
+    font-size: 2rem;
+  }
+  h3 {
+    font-size: 1.25rem;
+  }
+  h4 {
+    font-size: 0.875rem;
+  }
+  p {
+    margin-bottom: 1.25rem;
+  }
+  @media screen and (min-width: 768px) {
+    h1 {
+      font-size: 4rem;
+    }
+    h2 {
+      font-size: 2.5rem;
+    }
+    h3 {
+      font-size: 1.75rem;
+    }
+    h4 {
+      font-size: 1rem;
+    }
+    body {
+      font-size: 1rem;
+    }
+    h1,
+    h2,
+    h3,
+    h4 {
+      line-height: 1;
+    }
+  }
+
 h1, h2, h3, h4, h5, h6 {
     padding: 0;
     margin: 0;
@@ -32,30 +88,45 @@ img { max-width: 100%; }
 .nav {
     width: 100%;
     height: auto;
-    position: relative;
+    position: sticky;
+    top: 0;
 }
 
 .mobile-nav {
+    position: relative;
+}
+
+.nav-toggle {
     position: absolute;
-    right: 30px;
-    top: 25px;
+    top: 15px;
+    right: 15px;
 }
 
 .nav button {
     background-color: rgba(0, 0, 255, 0);
     border: none;
+    font-size: 1rem;
+}
+
+.nav button:hover {
+    cursor: pointer;
 }
 
 .mobile-nav-icon {
-    color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
     font-size: 1.5em;
 }
 
+.border-bottom {
+    border-bottom: 1px solid rgba(58, 58, 58, 0.596);
+}
+
 .links a {
-    color: black;
+    color: rgba(0, 0, 0, 0.9);
+    background-color: white;
     font-size: 1rem;
     text-transform: capitalize;
-    letter-spacing: 1px;
+    letter-spacing: 2px;
     display: block;
     padding: 0.5rem 1rem;
     text-decoration: none;
@@ -64,7 +135,6 @@ img { max-width: 100%; }
 .links a:hover {
     background: rgb(14, 14, 14);
     color: white;
-    padding-left: 1.5rem;
 }
 
 .links {
@@ -73,47 +143,61 @@ img { max-width: 100%; }
   }
 
 .show-links {
-    height: 10rem;
+    height: 9rem;
+}
+
+.black-nav-btn {
+    color: black;
+    top: 0;
+}
+
+.nav-btn-position {
+    position: absolute;
+    top: 15px;
+    right: 15px;
 }
 
 .hero {
     height: 100%;
     width: 100%;
-    color: white;
+    color: rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
     flex-direction: column;
     margin: 0;
-    padding: 30px;
-    padding-left: 2.8em;
+    padding: 2.5em;
     padding-top: 40px;
-    background-image: url('assets/images/mobile-header-background.jpg');
-    background-repeat: no-repeat;
-    background-size: 105%;
     display: flex;
-    padding-bottom: 100%;
 }
 
 
 .hero h1 {
-    font-size: 2.5rem;
-    font-weight: 600;
-    letter-spacing: 4.5px;
+    font-size: 2.7rem;
+    font-weight: 500;
+    letter-spacing: 4px;
+    color: #000000e5;
 }
 
 .hero p {
-    font-size: 1.3em;
+    font-size: 1.2em;
+    color: #000000c7;
     font-weight: 100;
     letter-spacing: 3px;
     margin: 2px 0px;
+
 }
 
 .hero-btn {
     background-color: rgba(255, 255, 255, 0.95);
-    margin-left: 5em;
+    margin-left: 0%;
     margin-top: 1em;
-    margin-right: 1em;
+    margin-right: 10%;
+    margin-bottom: 2rem;
     padding: 8px 14px;
     border-radius: 8px;
     text-align: center;
+    max-width: 5rem;
+    min-width: 5rem;
+    display: none;
 }
 
 .hero-btn a {
@@ -122,6 +206,293 @@ img { max-width: 100%; }
     text-decoration: none;
 }
 
+.hero-image {
+    padding-top: 2.4em;
+    width: 65%;
+    align-self: center;
+    height: auto;
+}
+
+
+.hero img {
+    border-radius: 200px;
+    border: none;
+    box-shadow: 0 0 10px 5px rgba(20, 20, 20, 0.733);
+}
+
+.projects-title {
+    color: var(--white-header-text);
+    background-color: var(--dark_gray_background);
+    font-weight: 800;
+    text-align: center;
+    font-size: 1.4rem;
+    padding: 1rem 0;
+}
+
+.projects-title p {
+    color: var(--dark_text);
+    font-weight: 600;
+    margin-bottom: 0;
+}
+
+.product-container {
+    max-width: 900px;
+    margin: 1rem auto;
+    padding: 2.75rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
+    gap: 2rem;
+    place-items: center;
+}
+
+.product-item {
+    color: white;
+    background-color: var(--dark_gray_background);
+    padding: 1.5rem;
+    border-radius: 1rem;
+}
+
+.product-image {
+    height: auto;
+    width: 100%;
+}
+
+.product-image img {
+    border-radius: 1rem;
+}
+
+.product-description {
+    padding: 1rem 0;
+}
+
+.product-description h3 {
+    color: white;
+    font-weight: 700;
+    font-size: 1.8rem;
+}
+
+.product-description p {
+    padding-top: 0.8rem;
+    color: var(--light_gray_text);
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.product-data {
+    display: flex;
+    font-size: 1.5rem;
+}
+
+.product-data h4 {
+    color: var(--white-header-text);
+    font-size: 1rem;
+}
+
+.product-data p {
+    font-size: 1rem;
+    color: var(--light_gray_text);
+    padding-top: 0.2rem;
+}
+
+.product-data-align-right {
+    margin-left: auto;
+}
+
+.mobile-contact-section {
+    display: block;
+    font-size: 1rem;
+    padding: 1rem 2.75rem;
+}
+
+.mobile-contact-header h2, .mobile-contact-info {
+    padding-bottom: 0.8rem;
+}
+
+.mobile-contact-info h5 {
+    font-size: 1.2rem;
+}
+
+
+.mobile-contact-info p {
+    padding-top: 0.2rem;
+}
+
+.mobile-contact-header p, .mobile-contact-info p {
+    color: var(--dark_gray_text);
+}
+
+.mobile-order-form {
+    background-color: var(--dark_gray_background);
+    padding: 2.75rem;
+}
+
+.mobile-footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 1rem 2.75rem;
+}
+
+.mobile-footer h3 {
+    font-weight: 500;
+    font-size: 0.8rem;
+    padding-bottom: 0.5rem;
+    padding-top: 1rem;
+}
+
+.mobile-footer p {
+    font-weight: 100;
+    font-size: 0.8rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0;
+    margin-bottom: 0.5rem;
+}
+
+/* --------------media queries-------------------- */
+
+@media screen and (max-width: 275px) {
+    .product-container {
+        gap: 1rem;
+    }
+
+    .product-item {
+        padding: 1rem;
+    }
+
+    .nav-toggle, .nav-btn-position {
+        right: 10px;
+    }
+}
+
+@media screen and (max-width: 250px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1.1rem;
+    }
+
+    .nav button {
+        font-size: 0.8rem;
+    }
+
+    .hero-btn {
+        padding: 6px 8px;
+    }
+
+    .hero-btn a {
+        font-size: 0.9rem;
+    }
+
+    .projects-title h2 {
+        font-size: 1.6rem;
+    }
+
+    .projects-title p {
+        font-size: 1rem;
+    }
+
+    .product-description h3 {
+        font-size: 1.6rem;
+    }
+
+    .product-description p, .product-data h4 {
+        font-size: 0.9rem;
+    }
+
+    .product-data h4 {
+        font-size: 0.8rem;
+    }
+}
+
+@media screen and (max-width: 210px) {
+    .hero h1 {
+        font-size: 1.5rem;
+    }
+
+    .hero p {
+        font-size: 0.9rem;
+    }
+
+    .nav button {
+        font-size: 0.7rem;
+    }
+
+    .hero-btn {
+        padding: 4px 8px;
+    }
+
+    .hero-btn a {
+        font-size: 0.8rem;
+    }
+
+    .product-description p, .product-data h4 {
+        font-size: 0.8rem;
+    }
+
+    .product-description h3 {
+        font-size: 1.4rem;
+    }
+
+    .product-data h4 {
+        font-size: 0.7rem;
+    }
+
+    .nav-toggle, .nav-btn-position {
+        right: 8px;
+    }
+}
+
+@media screen and (max-width: 180px) {
+    .hero h1 {
+        font-size: 1.2rem;
+    }
+
+    .hero p {
+        font-size: 0.7rem;
+    }
+
+    .nav button {
+        font-size: 0.6rem;
+    }
+
+    .hero-btn {
+        padding: 4px 4px;
+        margin-left: 0%;
+    }
+
+    .hero-btn a {
+        font-size: 0.8rem;
+    }
+
+    .projects-title h2 {
+        font-size: 1.3rem;
+    }
+
+    .product-description h3 {
+        font-size: 1.3rem;
+    }
+
+    .product-data h4 {
+        font-size: 0.7rem;
+    }
+
+    .nav-toggle, .nav-btn-position {
+        right: 5px;
+    }
+}
+
+@media(max-width: 768px) {
+    .projects-grid-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+
 @media screen and (min-width: 768px) {
     /* Ipad Styles */
+    .hero-btn {
+        display: block;
+    }
 }
