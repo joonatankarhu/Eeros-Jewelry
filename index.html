@@ -17,31 +17,28 @@
     <script src="https://unpkg.com/vue@3"></script>
 
     <div id="app">
-
+        <!-- Navigation -->
         <div class="nav">
             <div class="mobile-nav">
                 <button class="nav-toggle">
                     <i class="fa-solid fa-bars mobile-nav-icon" aria-hidden="true"></i>
                 </button>
             </div>
-            <!-- mobile nav links -->
+            <!-- Mobile Nav Links -->
             <ul class="links">
                 <li>
-                <a href="index.html">Home</a>
+                    <a href="index.html">Home</a>
                 </li>
                 <li>
-                <a href="about.html">Products</a>
-                </li>
-                <li>
-                <a href="projects.html">Order</a>
+                    <a href="about.html">Products</a>
                 </li>
                 <li class="border-bottom">
-                <a href="contact.html">Contact</a>
+                    <a href="contact.html">Contact</a>
                 </li>
             </ul>
         </div>
 
-
+        <!-- Landing Page -->
         <div class="hero">
             <h1>Eero's</h1>
             <p>Jewelery</p>
@@ -53,40 +50,40 @@
             </div>
         </div>
 
-
-        <div class="projects-title">
+        <!-- Product-section-Title -->
+        <div class="products-section-title">
             <h2>Work</h2>
             <p>Samples</p>
         </div>
 
-        <div class="product-container">
+        <!-- Products -->
+        <div class="products-container">
             <div class="product-item">
                 <div class="product-image">
-                    <img src="./assets/images/products/blue_sapphire_ring.jpg" alt="">
+                    <img src="./assets/images/products/blue_sapphire_ring.jpg" alt="Sapphire Ring">
                 </div>
                 <div class="product-description">
-                    <h3>Sapphire Ring</h3>
-                    <p>Silver Jewellery with a Blue Stone</p>
+                    <h2>Sapphire Ring</h2>
+                    <p>Silver Jewelery with a Blue Stone</p>
                 </div>
                 <div class="product-data">
                     <div>
-                        <h4>Material</h4>
+                        <p>Material</p>
                         <p>Silver</p>
                     </div>
                     <div class="product-data-align-right">
-                        <h4>Price</h4>
+                        <p>Price</p>
                         <p>250€</p>
                     </div>
                 </div>
             </div>
         </div>
 
-
+        <!-- Contact -->
         <div class="mobile-contact-section">
-            <!-- Contact Section -->
             <div class="mobile-contact-header">
                 <h2>Contact</h2>
-                <p>To make an order or to contact me, you will find the order form and the contact email below</p>
+                <p>Please contact me with this email down below</p>
             </div>
             <div class="mobile-contact-info">
                 <h5>Email address</h5>
@@ -94,28 +91,19 @@
             </div>
         </div>
 
-
-        <div class="mobile-order-form">
-            <form action="#">
-
-            </form>
-        </div>
-
-        <div class="mobile-footer">
-            <h3>Website Created by<br>Joonatan Karhu</h3>
+        <!-- Footer -->
+        <footer>
+            <p>Website Created by<br>Joonatan Karhu</p>
             <p>Copyrights 2022</p>
-        </div>
-
+        </footer>
     </div>
-
     <!-- Import App -->
-    <script src="./main.js"></script>
-
+    <script src="./App.js"></script>
     <!-- Mount App -->
     <script>
         const mountedApp = app.mount('#app')
     </script>
-    <script src="carosel.js"></script>
-    <script src="script.js"></script>
+    <script src="ImgCarosel.js"></script>
+    <script src="navbar.js"></script>
 </body>
 </html>
