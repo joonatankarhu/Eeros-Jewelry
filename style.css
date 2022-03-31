@@ -22,6 +22,10 @@
     --dark_gray_text: rgb(44, 44, 44);
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -505,6 +509,10 @@ footer p {
 
 @media screen and (min-width: 768px) {
     /* Ipad Styles */
+
+    .contact-order-button button {
+        max-width: 200px;
+    }
 
     html {
         font-size: 18px;
