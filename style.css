@@ -266,31 +266,37 @@ img {
 .contact-section {
     display: block;
     font-size: 1rem;
-    padding: 1rem 2.75rem;
+    padding: 2.5rem 2.75rem;
 }
 
-.contact-info {
-    padding-bottom: 0.8rem;
-}
 
 .contact-info h5 {
     font-size: 1.2rem;
 }
 
+.contact-info a {
+    font-size: 1rem;
+    color: rgba(23, 23, 23, 0.783);
+    font-weight: 800;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
 
 .contact-info p {
-    padding-top: 0.2rem;
+    padding-top: 0.1rem;
 }
 
-.contact-header {
-    padding: 10px 0px;
+.contact-order-section {
+    padding: 6px 0px;
 }
 
-.contact-header p, .contact-info p {
+.contact-order-section p, .contact-info p {
     color: var(--dark_gray_text);
 }
 
-.contact-header h3 {
+.contact-order-section h3 {
     padding: 8px 0px;
 }
 
@@ -312,9 +318,27 @@ img {
     text-transform: uppercase;
 }
 
+.contact-order-button button {
+    padding: 14px 18px;
+    width: 100%;
+    color: rgb(244, 244, 244);
+    background-color: rgb(57, 57, 57);
+    border: none;
+    border-radius: 6px;
+    font-weight: 200;
+    font-size: 1rem;
+    text-transform: uppercase;
+}
+
 .order-button button:hover {
     color: white;
     background-color: rgb(74, 74, 74);
+    cursor: pointer;
+}
+
+.contact-order-button button:hover {
+    color: rgb(255, 255, 255);
+    background-color: rgb(0, 0, 0);
     cursor: pointer;
 }
 
