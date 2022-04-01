@@ -12,53 +12,44 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&family=Roboto:ital,wght@0,300;0,400;1,500&display=swap" rel="stylesheet">
     <!-- Importing Font Awesome Icons -->
     <script src="https://kit.fontawesome.com/382e84d0f6.js" crossorigin="anonymous"></script>
-    <link rel="icon" type="image/x-icon" href="./assets/images/products/header-image.jpg">
+    <link rel="icon" type="image/x-icon" href="./assets/icons/logo.png">
 </head>
 <body>
     <script src="https://unpkg.com/vue@3"></script>
 
-    <div id="app">
+    <div id="home">
+
+
         <!-- Navigation -->
-        <div class="nav">
-            <div class="mobile-nav">
-                <!-- Mobile Nav Icon -->
-                <button class="nav-toggle">
-                    <i class="fa-solid fa-bars mobile-nav-icon" aria-hidden="true"></i>
-                </button>
-                <!-- Mobile Nav Links -->
-                <ul class="links">
-                    <li>
-                        <a href="#app">Home</a>
-                    </li>
-                    <li>
-                        <a href="#products">Products</a>
-                    </li>
-                    <li>
-                        <a href="#order">Order</a>
-                    </li>
-                    <li class="border-bottom">
-                        <a href="#contact">Contact</a>
-                    </li>
-                </ul>
-            </div>
-            <div class="desk-nav">
-                <!-- Desk Nav Links -->
-                <ul>
-                    <li>
-                        <a href="#app">Home</a>
-                    </li>
-                    <li>
-                        <a href="#products">Products</a>
-                    </li>
-                    <li>
-                        <a href="#order">Order</a>
-                    </li>
-                    <li>
-                        <a href="#contact">Contact</a>
-                    </li>
-                </ul>
-            </div>
+        <nav id="nav">
+        <div class="nav-center">
+          <!-- nav header -->
+          <div class="nav-header">
+            <img src="./assets/icons/logo.png" alt="logo" class="logo">
+            <button class="nav-toggle">
+              <i class="fas fa-bars"></i>
+            </button>
+          </div>
+          <!-- links -->
+          <div class="links-container">
+            <ul class="links">
+              <li>
+                <a href="#home" class="scroll-link">Home</a>
+              </li>
+              <li>
+                <a href="#products" class="scroll-link">Products</a>
+              </li>
+              <li>
+                <a href="#order" class="scroll-link">Order</a>
+              </li>
+              <li>
+                <a href="#contact" class="scroll-link">Contact</a>
+              </li>
+            </ul>
+            
+          </div>
         </div>
+      </nav>
 
         <!-- Landing Page -->
         <div class="hero">
@@ -66,7 +57,7 @@
                 <h1>Eero's</h1>
                 <p>Jewelery</p>
                 <div class="hero-btn">
-                    <a href="#">Contact</a>
+                    <a href="#contact" class="scroll-link">Contact</a>
                 </div>
             </div>
             <div class="width-60">
@@ -76,8 +67,8 @@
             </div>
         </div>
 
+        <section id="products" class="section">
         <!-- Product-section-Title -->
-        <div id="products"></div>
         <div class="section-title">
             <h2>Product</h2>
             <p>Samples</p>
@@ -176,43 +167,46 @@
                 </div>
             </div>
         </div>
+    </section>
 
-        <!-- Product-section-Title -->
-        <div class="section-title" id="contact">
-            <h2>Contact</h2>
-        </div>
-
-        <!-- Contact -->
-        <div class="contact-section">
-            <div class="contact-info">
-                <p><b>Email address</b></p>
-                <p>
-                    <a href="mailto: eeros_jewelery@outlook.com">eeros_jewelery@outlook.com</a>
-                </p>
+        <!-- Contact-section-Title -->
+        <section id="contact" class="section">
+            <div class="section-title">
+                <h2>Contact</h2>
             </div>
-            <div class="contact-order-section" id="order">
-                <p><b>Make an order</b></p>
-                <p>To buy a product, click on the button below to send an order request</p>
-                <div class="contact-order-button">
-                    <button>Order</button>
+
+            <!-- Contact -->
+            <div class="contact-section">
+                <div class="contact-info">
+                    <p><b>Email address</b></p>
+                    <p>
+                        <a href="mailto: eeros_jewelery@outlook.com">eeros_jewelery@outlook.com</a>
+                    </p>
+                </div>
+                <div class="contact-order-section">
+                    <p><b>Make an order</b></p>
+                    <p>To buy a product, click on the button below to send an order request</p>
+                    <div class="contact-order-button">
+                        <button>Order</button>
+                    </div>
                 </div>
             </div>
-        </div>
+        </section>
+        <section id="order" class="section">
+            <p>hello world</p>
+        </section>
 
         <!-- Footer -->
-        <footer>
-            <p>Website Created by<br>Joonatan Karhu</p>
-            <p>Copyrights 2022</p>
+        <footer class="section">
+            <p>Website Created by<br><a href="http://joonakarhu.com/" target="_blank">Joonatan Karhu</a></p>
+            <p>Copyrights &copy;<span id="date"></span></p>
         </footer>
+        <!-- Back to top Button -->
+        <a href="#home" class="scroll-link top-link">
+            <i class="fas fa-arrow-up"></i>
+        </a>
     </div>
-    <!-- Import App -->
-    <script src="./App.js"></script>
-
-    <!-- Mount App -->
-    <script>
-        const mountedApp = app.mount('#app')
-    </script>
+    <script src="MyNav.js"></script>
     <script src="ImgCarosel.js"></script>
-    <script src="navbar.js"></script>
 </body>
 </html>
