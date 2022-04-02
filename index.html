@@ -12,7 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&family=Roboto:ital,wght@0,300;0,400;1,500&display=swap" rel="stylesheet">
     <!-- Importing Font Awesome Icons -->
     <script src="https://kit.fontawesome.com/382e84d0f6.js" crossorigin="anonymous"></script>
-    <link rel="icon" type="image/x-icon" href="./assets/icons/logo.png">
+    <link rel="icon" type="image/x-icon" href="./assets/images/products/blue_sapphire_ring.jpg">
 </head>
 <body>
     <script src="https://unpkg.com/vue@3"></script>
@@ -25,7 +25,8 @@
         <div class="nav-center">
           <!-- nav header -->
           <div class="nav-header">
-            <img src="./assets/icons/logo.png" alt="logo" class="logo">
+            <img src="./assets/images/products/blue_sapphire_ring.jpg" alt="logo" class="logo">
+            <span>Eero's Jewelery</span>
             <button class="nav-toggle">
               <i class="fas fa-bars"></i>
             </button>
@@ -40,10 +41,10 @@
                 <a href="#products" class="scroll-link">Products</a>
               </li>
               <li>
-                <a href="#order" class="scroll-link">Order</a>
+                <a href="#contact" class="scroll-link">Contact</a>
               </li>
               <li>
-                <a href="#contact" class="scroll-link">Contact</a>
+                <a href="#order" class="scroll-link">Order</a>
               </li>
             </ul>
             
@@ -74,24 +75,32 @@
             <p>Samples</p>
         </div>
 
-        <!-- Products -->
-        <div class="products-container">
-            <!-- Item 1-->
-            <div class="product-item-column">
-                <div class="product-item">
-                    <div class="product-image">
-                        <img src="./assets/images/products/blue_sapphire_ring.jpg" alt="Sapphire Ring">
-                    </div>
-                    <div class="product-description">
-                        <h2>Blue Stone</h2>
-                        <p>Silver ring with a blue stone</p>
-                    </div>
-                    <div class="order-button">
-                        <button>Place Order</button>
-                    </div>
+        <!-- The Modal -->
+        <div id="orderModal" class="order-modal">
+            <!-- Modal content -->
+            <div class="order-modal-content">
+                <span class="close-modal">&times;</span>
+                <h2>Order Form</h2>
+                <div>
+                    <form action="#" class="order-form">
+                        <label for="fname">First Name</label>
+                        <input type="text" id="fname" name="firstname" placeholder="Name">
+                        <label for="lname">Last Name</label>
+                        <input type="text" id="lname" name="lastname" placeholder="Last name">
+                        <label for="lname">Email Address</label>
+                        <input type="text" id="lname" name="lastname" placeholder="Email address">
+                        <label for="subject">Message</label>
+                        <textarea id="subject" name="subject" placeholder="Write something.." style="height:75px"></textarea>
+
+                        <input type="submit" value="Confirm Order">
+                    </form>
                 </div>
             </div>
-            <!-- Item 2-->
+        </div>
+
+        <!-- Products -->
+        <div class="products-container" id="api-products-container">
+            <!-- Item 1-->
             <div class="product-item-column">
                 <div class="product-item">
                     <div class="product-image">
@@ -102,11 +111,11 @@
                         <p>Handmade Silver ring with red garnet</p>
                     </div>
                     <div class="order-button">
-                        <button>Place Order</button>
+                        <button onclick="displayOrderForm()">Place Order</button>
                     </div>
                 </div>
             </div>
-            <!-- Item 3 -->
+            <!-- Item 2-->
             <div class="product-item-column">
                 <div class="product-item">
                     <div class="product-image">
@@ -117,7 +126,22 @@
                         <p>Silver ring with blue Sapphire</p>
                     </div>
                     <div class="order-button">
-                        <button>Place Order</button>
+                        <button onclick="displayOrderForm()">Place Order</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Item 3 -->
+            <div class="product-item-column">
+                <div class="product-item">
+                    <div class="product-image">
+                        <img src="./assets/images/products/blue_sapphire_ring.jpg" alt="Sapphire Ring">
+                    </div>
+                    <div class="product-description">
+                        <h2>Blue Stone</h2>
+                        <p>Silver ring with a blue stone</p>
+                    </div>
+                    <div class="order-button">
+                        <button onclick="displayOrderForm()">Place Order</button>
                     </div>
                 </div>
             </div>
@@ -132,7 +156,7 @@
                         <p>Silver ring with bright green stone</p>
                     </div>
                     <div class="order-button">
-                        <button>Place Order</button>
+                        <button onclick="displayOrderForm()">Place Order</button>
                     </div>
                 </div>
             </div>
@@ -147,7 +171,7 @@
                         <p>Silver amulet with lightgreen stone</p>
                     </div>
                     <div class="order-button">
-                        <button>Place Order</button>
+                        <button onclick="displayOrderForm()">Place Order</button>
                     </div>
                 </div>
             </div>
@@ -162,7 +186,7 @@
                         <p>Beautiful silver amulet</p>
                     </div>
                     <div class="order-button">
-                        <button>Place Order</button>
+                        <button onclick="displayOrderForm()">Place Order</button>
                     </div>
                 </div>
             </div>
@@ -183,17 +207,14 @@
                         <a href="mailto: eeros_jewelery@outlook.com">eeros_jewelery@outlook.com</a>
                     </p>
                 </div>
-                <div class="contact-order-section">
+                <div class="contact-order-section" id="order">
                     <p><b>Make an order</b></p>
                     <p>To buy a product, click on the button below to send an order request</p>
                     <div class="contact-order-button">
-                        <button>Order</button>
+                        <button onclick="displayOrderForm()">Order</button>
                     </div>
                 </div>
             </div>
-        </section>
-        <section id="order" class="section">
-            <p>hello world</p>
         </section>
 
         <!-- Footer -->
@@ -206,7 +227,9 @@
             <i class="fas fa-arrow-up"></i>
         </a>
     </div>
+    <script type="module" src="Api.js"></script>
     <script src="MyNav.js"></script>
     <script src="ImgCarosel.js"></script>
+    <script src="OrderModal.js"></script>
 </body>
 </html>
