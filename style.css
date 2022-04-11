@@ -422,6 +422,7 @@ nav {
       top: 0;
       z-index: 300;
       padding: 0;
+      padding-left: 50px;
     }
     .nav-center {
       width: 90vw;
@@ -690,7 +691,7 @@ footer p {
 
 @media screen and (min-width: 768px) {
     /* Ipad Styles */
-
+    
     .links a:hover {
         color: rgba(255, 255, 255, 0.95);
         padding-left: 12px;
@@ -698,6 +699,7 @@ footer p {
 
     footer {
         text-align: left;
+        padding: 2rem 75px;
     }
 
     footer a {
@@ -777,9 +779,9 @@ footer p {
     }
 
     .hero-image {
-        width: 70%;
+        width: 90%;
         padding: 0;
-        padding-top: 95px;
+        padding-top: 0px;
         padding-bottom: 30px;
         margin: auto;
         align-self: auto;
@@ -827,6 +829,7 @@ footer p {
 
     .contact-section {
         height: 450px;
+        padding-left: 75px;
     }
 }
 
