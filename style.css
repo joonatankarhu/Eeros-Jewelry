@@ -117,7 +117,7 @@ footer a:hover {
     display: none;
 }
 
-.hero-btn a {
+.hero-btn button {
     color: #ffffff;
     background: transparent;
     font-weight: 500;
@@ -607,7 +607,7 @@ footer p {
         padding: 6px 8px;
     }
 
-    .hero-btn a {
+    .hero-btn button {
         font-size: 0.9rem;
     }
 
@@ -641,7 +641,7 @@ footer p {
         padding: 4px 8px;
     }
 
-    .hero-btn a {
+    .hero-btn button {
         font-size: 0.8rem;
     }
 
@@ -668,7 +668,7 @@ footer p {
         margin-left: 0%;
     }
 
-    .hero-btn a {
+    .hero-btn button {
         font-size: 0.8rem;
     }
 
@@ -764,7 +764,7 @@ footer p {
         margin-top: 75px;
     }
 
-    .hero-btn a {
+    .hero-btn button {
         color: #ffffff;
         text-transform: uppercase;
         padding: 15px 39px;
@@ -772,10 +772,11 @@ footer p {
         letter-spacing: 1px;
     }
 
-    .hero-btn a:hover {
+    .hero-btn button:hover {
         color: rgba(0, 0, 0, 0.8);
         background: #ffffff;
         transition: 0.3s linear;
+        cursor: pointer;
     }
 
     .hero-image {
