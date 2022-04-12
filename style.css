@@ -589,6 +589,11 @@ nav {
 }
 
 
+.required:after {
+    content:" *";
+    color: red;
+}
+
 footer {
     background-color: black;
     color: white;

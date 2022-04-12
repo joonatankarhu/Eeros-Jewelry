@@ -90,17 +90,17 @@
                 <span class="close-modal">&times;</span>
                 <h2>Contact Form</h2>
                 <div>
-                    <form action="POST" data-netlify="true" class="order-form">
+                    <form action="POST" data-netlify="true" class="order-form" name="order-form">
 
                         <label for="name">Name</label>
-                        <input type="text" id="name" name="name" placeholder="Your name">
+                        <input type="text" id="name" name="name" placeholder="Enter your name">
                         
 
-                        <label for="email">Email Address</label>
-                        <input type="text" id="email" name="email" placeholder="Your email">
+                        <label for="email" class="required">Email Address</label>
+                        <input type="text" id="contact-email" name="email" placeholder="Enter your email" required>
 
-                        <label for="message">Message</label>
-                        <textarea id="message" name="message" placeholder="Message or order information..." style="height:75px"></textarea>
+                        <label for="message" class="required">Message</label>
+                        <textarea id="message" name="message" placeholder="Message or order related information" style="height:75px" required></textarea>
 
                         <!-- <div class="field">
                             <div data-netlify-recaptcha="true"></div>
