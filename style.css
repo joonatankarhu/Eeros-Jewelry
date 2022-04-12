@@ -581,6 +581,11 @@ nav {
         width: 90%;
         max-height: unset;
     }
+
+    .field {
+        max-width: 75%;
+        overflow: hidden;
+    }
 }
 
 
