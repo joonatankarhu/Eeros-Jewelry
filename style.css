@@ -96,6 +96,10 @@ footer a:hover {
     display: flex;
 }
 
+.field {
+    margin-bottom: 10px;
+}
+
 
 .hero h1 {
     font-size: 2.7rem;
