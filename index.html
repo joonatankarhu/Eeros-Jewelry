@@ -14,9 +14,15 @@
     <script src="https://kit.fontawesome.com/382e84d0f6.js" crossorigin="anonymous"></script>
     <link rel="icon" type="image/x-icon" href="./assets/images/products/blue_sapphire_ring.jpg">
 </head>
-<body>
-    <script src="https://unpkg.com/vue@3"></script>
-
+<body onload="loadFun()">
+    <div id="loading"></div>
+    <script>
+       var load = document.getElementById('loading');
+       function loadFun() {
+          load.style.display = 'none';
+       }
+    </script>
+    
     <div id="home">
 
 
@@ -231,13 +237,14 @@
         <footer class="section">
             <p>Website Created by<br><a href="http://joonakarhu.com/" target="_blank">Joonatan Karhu</a></p>
             <p>Copyrights &copy;<span id="date"></span></p>
+            <a target="_blank" href="https://loading.io/">Icon 'load spinner' from loading.io</a>
         </footer>
         <!-- Back to top Button -->
         <a href="#home" class="scroll-link top-link">
             <i class="fas fa-arrow-up"></i>
         </a>
     </div>
-    <script src="MyNav.js"></script>
+    <script src="MyNav.js"></>
     <script src="ImgCarosel.js"></script>
     <script src="OrderModal.js"></script>
 </body>
