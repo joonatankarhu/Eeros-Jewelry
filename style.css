@@ -179,7 +179,7 @@ footer a:hover {
     gap: 2rem;
     place-items: center;
     margin: 0 -5px;
-    background-color: rgb(228 228 228);
+    background-color: white;
 }
 
 /* Clear floats after the columns */
@@ -194,7 +194,7 @@ footer a:hover {
     background-color: white;
     padding: 1.5rem;
     border-radius: 1rem;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     text-align: center;
 }
 
@@ -203,8 +203,13 @@ footer a:hover {
     width: 100%;
 }
 
+.hide-on-mobile {
+    display: none;
+}
+
 .product-image img {
     border-radius: 1rem;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
 }
 
 .product-description {
@@ -717,6 +722,10 @@ footer p {
 
 @media screen and (min-width: 768px) {
     /* Ipad Styles */
+
+    .hide-on-mobile {
+        display: block;
+    }
     
     .links a:hover {
         color: rgba(255, 255, 255, 0.95);
@@ -787,7 +796,7 @@ footer p {
     }
 
     .hero-btn {
-        margin-top: 75px;
+        margin-top: 70px;
     }
 
     .hero-btn button {
