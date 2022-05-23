@@ -822,6 +822,7 @@ footer p {
     
     .contact-order-section, .contact-info {
         margin-top: 50px;
+        margin-top: 20px;
     }
 
     .contact-order-button button {
@@ -937,12 +938,13 @@ footer p {
     }
     
     .section-title {
-        padding: 2.5rem;
+        padding: 2rem;
     }
 
     .section-title h2 {
         font-size: 3rem;
         letter-spacing: 2px;
+        padding-top: 1rem;
     }
 
     .section-title p {
@@ -960,8 +962,9 @@ footer p {
     }
 
     .contact-section {
-        height: 450px;
+        height: 350px;
         padding-left: 76px;
+        padding-top: 10px;
     }
 }
 
@@ -974,5 +977,7 @@ footer p {
 @media screen and (min-width: 1000px) {
     .products-container {
         padding: 76px;
+        padding-top: 20px;
+        padding-bottom: 10px;
     }
 }
