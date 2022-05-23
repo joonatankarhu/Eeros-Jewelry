@@ -168,19 +168,27 @@ footer a:hover {
     background-color: var(--black);
     font-weight: 800;
     text-align: center;
-    font-size: 1.4rem;
-    padding: 2rem 0;
+    font-size: 2rem;
+    padding: 1.2rem 0;
+}
+
+
+
+.section-title h2 {
+    font-size: 2.2rem;
 }
 
 .section-title p {
     color: var(--dark_text);
     font-weight: 600;
+    font-size: 1.2rem;
     margin-bottom: 0;
 }
 
 .products-container {
     max-width: 900px;
-    padding: 2.75rem;
+    padding: 0rem;
+    padding-top: 2rem;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
     gap: 3rem;
@@ -742,6 +750,15 @@ footer p {
     }
 }
 
+@media screen and (min-width: 500px) and (max-width: 750px) {
+    .hero img {
+        width: 50%;
+    }
+
+    .products-container {
+        padding: 3rem;
+    }
+}
 
 @media screen and (min-width: 768px) {
     /* Ipad Styles */
@@ -830,7 +847,7 @@ footer p {
     }
 
     .hero h1 {
-        font-size: 8rem;
+        font-size: 6rem;
         letter-spacing: 1px;
         line-height: 0.9;
         font-weight: 400;
@@ -924,6 +941,12 @@ footer p {
     .contact-section {
         height: 450px;
         padding-left: 76px;
+    }
+}
+
+@media screen and (min-width: 950px) {
+    .hero h1 {
+        font-size: 8rem;
     }
 }
 
