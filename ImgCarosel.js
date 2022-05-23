@@ -3,7 +3,7 @@ var images = new Array(
     "./assets/images/products/green_diamond_ring.jpg", 
     "./assets/images/products/blue_sapphire_ring.jpg",
     "./assets/images/products/header-image.jpg",
-    "./assets/images/products/green_stone_amulet.jpg",
+    "./assets/images/products/blue_ring.jpg",
     );
 var i = setInterval(auto, 1800);
 

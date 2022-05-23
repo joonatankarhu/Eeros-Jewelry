@@ -21,6 +21,11 @@
     --light_gray_text: #B4B4B4;
     --dark_gray_text: rgb(44, 44, 44);
     --transition: all 0.3s linear;
+    --primary: #0c575adc;
+    --black: #000000;
+    --white: #ffffff;
+    --gray: #656565;
+    --lightGray: #ebede9;
 }
 
 #loading {
@@ -38,7 +43,7 @@ html {
 body {
     margin: 0;
     padding: 0;
-    font-family: 'Roboto', 'Open Sans', sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-size: 16px;
 }
 
@@ -89,7 +94,7 @@ footer a {
 footer a:hover {
     text-decoration: underline;
     cursor: pointer;
-    color: rgb(0, 78, 212);
+    color: var(--primary);
 }
 
 .hero {
@@ -135,7 +140,7 @@ footer a:hover {
 .hero-btn button {
     color: #ffffff;
     background: transparent;
-    font-weight: 500;
+    font-weight: 600;
     text-decoration: none;
     border: 2px solid white;
 }
@@ -152,13 +157,12 @@ footer a:hover {
 .hero img {
     border-radius: 200px;
     border: none;
-    box-shadow: 0 0 10px 5px rgba(20, 20, 20, 0.733);
-    width: 60%;
+    width: 65%;
 }
 
 .section-title {
     color: var(--white-header-text);
-    background-color: var(--dark_gray_background);
+    background-color: var(--black);
     font-weight: 800;
     text-align: center;
     font-size: 1.4rem;
@@ -176,9 +180,9 @@ footer a:hover {
     padding: 2.75rem;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
-    gap: 2rem;
+    gap: 3rem;
     place-items: center;
-    margin: 0 -5px;
+    margin: 0px 1rem;
     background-color: white;
 }
 
@@ -285,11 +289,11 @@ footer a:hover {
 /* Modal Content/Box */
 .order-modal-content {
     background-color: #fefefe;
-    margin: 10% auto; /* 15% from the top and centered */
+    margin: 5% auto; /* 15% from the top and centered */
     padding: 30px;
     border: 1px solid #888;
-    border-radius: 10px;
-    width: 40%; /* Could be more or less, depending on screen size */
+    border-radius: 14px;
+    width: 35%; /* Could be more or less, depending on screen size */
 }
 
 /* The Close Button */
@@ -301,7 +305,7 @@ footer a:hover {
   }
   
 .close-modal:hover, .close-modal:focus {
-    color: black;
+    color: var(--primary);
     text-decoration: none;
     cursor: pointer;
     transition: var(--transition);
@@ -331,22 +335,25 @@ input[type=text], textarea {
   }
 
   input[type=submit] {
-    background-color: transparent;
-    color: white;
-    background-color: rgb(0, 0, 0, 0.8);
+    background-color: var(--primary);
+    color: var(--white);
+    border: 2px solid var(--white);
     padding: 10px 20px;
     font-size: 0.9rem;
-    font-weight: bold;
-    border-radius: 4px;
+    font-weight: 600;
+    border-radius: 8px;
     cursor: pointer;
-    border: none;
     -webkit-appearance: none;
     margin-top: 16px;
 
   }
 
   input[type=submit]:hover {
-    background-color: #000000;
+    color: var(--primary);
+    background-color: var(--white);
+    transition: 0.3s linear;
+    cursor: pointer;
+    border: 2px solid var(--primary);
   }
 
 /* End of order */
@@ -380,7 +387,7 @@ nav {
     color: black;
   }
   .fixed-nav .links a:hover {
-    color: black;
+    color: var(--primary);
   }
   /* .fixed-nav .links-container {
     height: auto !important;
@@ -433,7 +440,7 @@ nav {
     padding: 0.75rem 0;
   }
   .links a:hover {
-    color: rgba(0, 0, 0, 0.85);
+    color: var(--black)
     padding-left: 8px;
   }
   @media screen and (min-width: 800px) {
@@ -443,7 +450,7 @@ nav {
       top: 0;
       z-index: 300;
       padding: 0;
-      padding-left: 16px;
+      padding-left: 65px;
     }
     .nav-center {
       width: 90vw;
@@ -467,19 +474,19 @@ nav {
     }
     .links a {
       background: transparent;
-      color: rgba(0, 0, 0, 0.8);
+      color: var(--black);
       font-size: 1rem;
       text-transform: capitalize;
       letter-spacing: 0px;
       display: block;
       transition: var(--transition);
       margin: 0;
-      font-weight: 400;
-      padding: 0.75rem 13px;
+      font-weight: 500;
+      padding: 1rem 0.7rem;
     }
     .links a:hover {
       color: white;
-      background-color: rgba(0, 0, 0, 0.8);
+      background-color: var(--primary);
     }
   }
 
@@ -531,10 +538,10 @@ nav {
 .order-button button {
     padding: 14px 18px;
     width: 100%;
-    color: rgba(255, 255, 255, 1);
-    background-color: rgb(0, 0, 0, 0.8);
-    border: 2px solid rgb(55 55 55 / 40%);
-    border-radius: 6px;
+    background-color: var(--primary);
+    color: var(--white);
+    border: 2px solid var(--white);
+    border-radius: 8px;
     font-weight: 700;
     font-size: 0.8rem;
     text-transform: uppercase;
@@ -558,12 +565,14 @@ nav {
 }
 
 .order-button button:hover {
-    background-color: #000000;
-    color: rgb(255, 255, 255);
+    color: var(--primary);
+    background-color: var(--white);
+    transition: 0.3s linear;
+    cursor: pointer;
+    border: 2px solid var(--primary);
 }
 
 .contact-order-button button:hover {
-    background-color: rgb(0, 0, 0);
     cursor: pointer;
 }
 
@@ -723,12 +732,23 @@ footer p {
 @media screen and (min-width: 768px) {
     /* Ipad Styles */
 
+    .product-image img {
+        box-shadow: none;
+        border-radius: 8px;
+    }
+
+    
+
+    .product-item {
+        max-width: 300px;
+    }
+
     .hide-on-mobile {
         display: block;
     }
     
     .links a:hover {
-        color: rgba(255, 255, 255, 0.95);
+        color: var(--white);
         padding-left: 12px;
       }
 
@@ -755,6 +775,18 @@ footer p {
     .contact-order-button button {
         max-width: 200px;
         margin-top: 20px;
+        background-color: var(--primary);
+        color: var(--white);
+        border: 2px solid var(--white);
+        font-weight: 600;
+    }
+
+    .contact-order-button button:hover {
+        color: var(--primary);
+        background-color: var(--white);
+        transition: 0.3s linear;
+        cursor: pointer;
+        border: 2px solid var(--primary);
     }
 
     html {
@@ -762,15 +794,13 @@ footer p {
     }
 
     .hero {
-        background-image: url("./assets/images/header_background_darker.jpg");
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
         position: relative;
         display: flex;
         flex-direction: row;
         box-sizing: border-box;
         padding: 75px;
+        padding-top: 50px;
+        padding-bottom: 50px;
     }
 
     .width-40 {
@@ -782,17 +812,26 @@ footer p {
     }
 
     .hero h1, .hero p {
-        color: white;
+        color: var(--black);
     }
 
     .hero h1 {
         font-size: 8rem;
-        letter-spacing: 5px;
+        letter-spacing: 1px;
+        line-height: 0.9;
+        font-weight: 400;
     }
 
     .hero p {
-        font-size: 3.5rem;
+        margin-top: 1rem;
+        font-size: 2.6rem;
         letter-spacing: 5px;
+        color: var(--primary);
+        font-weight: 200;
+        text-transform: uppercase;
+        border-bottom: 2px solid var(--primary);
+        margin-right: 8rem;
+        margin-bottom: 5rem;
     }
 
     .hero-btn {
@@ -800,18 +839,23 @@ footer p {
     }
 
     .hero-btn button {
-        color: #ffffff;
+        color: var(--white);
         text-transform: uppercase;
-        padding: 15px 39px;
-        font-size: 1.5rem;
-        letter-spacing: 1px;
+        padding: 14px 30px;
+        font-size: 1.4rem;
+        letter-spacing: 0px;
+        background-color: var(--primary);
+        border: 2px solid var(--white);
+        border-radius: 8px;
+        font-weight: 600;
     }
 
     .hero-btn button:hover {
-        color: rgba(0, 0, 0, 0.8);
-        background: #ffffff;
+        color: var(--primary);
+        background-color: var(--white);
         transition: 0.3s linear;
         cursor: pointer;
+        border: 2px solid var(--primary);
     }
 
     .hero-image {
@@ -835,7 +879,7 @@ footer p {
     }
     
     .product-item-column {
-        width: 80%;
+        width: 100%;
         min-width: 0; 
         min-height: 0;
     }
@@ -865,12 +909,12 @@ footer p {
 
     .contact-section {
         height: 450px;
-        padding-left: 75px;
+        padding-left: 76px;
     }
 }
 
 @media screen and (min-width: 1000px) {
     .products-container {
-        padding: 75px;
+        padding: 76px;
     }
 }
