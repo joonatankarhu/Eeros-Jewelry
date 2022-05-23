@@ -161,13 +161,13 @@ footer a:hover {
 .hero img {
     border-radius: 200px;
     border: none;
-    width: 65%;
+    width: 70%;
     transition: 0.3s linear;
 }
 
 .section-title {
-    color: var(--black);
-    background-color: #ffffff;
+    color: white;
+    background-color: #0c0c0cf5;
     font-weight: 800;
     text-align: center;
     font-size: 2rem;
@@ -182,7 +182,7 @@ footer a:hover {
 }
 
 .section-title p {
-    color: #232323c6;
+    color: #8a8a8acc;
     font-weight: 600;
     font-size: 1.4rem;
     margin-bottom: 0;
@@ -300,14 +300,13 @@ footer a:hover {
     background-color: rgba(0,0,0,0.7); /* Black w/ opacity */
 }
 
-/* Modal Content/Box */
 .order-modal-content {
     background-color: #fefefe;
-    margin: 5% auto; /* 15% from the top and centered */
+    margin: 3% auto; 
     padding: 30px;
     border: 1px solid #888;
     border-radius: 14px;
-    width: 35%; /* Could be more or less, depending on screen size */
+    width: 35%;
 }
 
 /* The Close Button */
@@ -499,7 +498,7 @@ nav {
       display: block;
       transition: var(--transition);
       margin: 0;
-      font-weight: 500;
+      font-weight: 400;
       padding: 1rem 0.7rem;
     }
     .links a:hover {
@@ -631,6 +630,23 @@ nav {
 
     .contact-order-button button {
         margin-bottom: 0px;
+    }
+    
+    .section-title {
+        padding: 2rem 0;
+    }
+
+    .contact-section {
+        padding-bottom: 3rem;
+    }
+    
+    .contact-section h4 {
+        font-size: 1.2rem;
+        margin-bottom: 8px;
+    }
+
+    .contact-order-section {
+        margin-top: 10px;
     }
 }
 
@@ -781,15 +797,58 @@ footer p {
     }
 }
 
+.show-deskk {
+    display: none;
+}
+
 @media screen and (min-width: 768px) {
     /* Ipad Styles */
+
+    .contact-section p {
+        padding-left: 10px;
+    }
+
+    .contact-section h4 {
+        font-size: 1.3rem;
+        margin-bottom: 5px;
+    }
+
+    a.no-hover:hover {
+        background-color: white;
+        font-weight: 500;
+    }
+
+    .show-deskk {
+        display: block;
+    }
+
+    .nav-desk-header {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 0;
+      }
+
+    .nav-desk-header span {
+        color: rgba(0, 0, 0, 0.9);
+        font-size: 1rem;
+        font-weight: 800;
+        padding-left: 0;
+    }
+
+    .logo {
+        height: 21px;
+    }
+
 
     .product-image img {
         box-shadow: none;
         border-radius: 8px;
     }
 
-    
+    .show-mobilee {
+        display: none;
+    }
 
     .product-item {
         max-width: 300px;
@@ -827,11 +886,12 @@ footer p {
 
     .contact-order-button button {
         max-width: 200px;
-        margin-top: 20px;
+        margin-top: 0.6rem;
         background-color: var(--primary);
         color: var(--white);
-        border: 2px solid var(--white);
+        border: 1px solid var(--white);
         font-weight: 600;
+        margin-bottom: 0px;
     }
 
     .contact-order-button button:hover {
@@ -839,7 +899,7 @@ footer p {
         background-color: var(--white);
         transition: 0.3s linear;
         cursor: pointer;
-        border: 2px solid var(--primary);
+        border: 1.5px solid var(--primary);
     }
 
     html {
@@ -850,6 +910,7 @@ footer p {
         position: relative;
         display: flex;
         flex-direction: row;
+        align-items: center;
         box-sizing: border-box;
         padding: 75px;
         padding-top: 50px;
@@ -872,19 +933,21 @@ footer p {
         font-size: 6rem;
         letter-spacing: 1px;
         line-height: 0.9;
-        font-weight: 400;
+        font-weight: 300;
     }
 
     .hero p {
-        margin-top: 1rem;
-        font-size: 2.6rem;
+        margin-top: 0.75rem;
+        font-size: 2.2rem;
         letter-spacing: 5px;
         color: var(--primary);
         font-weight: 200;
         text-transform: uppercase;
         border-bottom: 2px solid var(--primary);
         margin-right: 8rem;
-        margin-bottom: 5rem;
+        margin-bottom: 4rem;
+        margin-left: 0.6rem;
+        font-family: 'Source Sans Pro', sans-serif;
     }
 
     .hero-btn {
@@ -894,13 +957,13 @@ footer p {
     .hero-btn button {
         color: var(--white);
         text-transform: uppercase;
-        padding: 14px 30px;
+        padding: 18px 32px;
         font-size: 1.4rem;
         letter-spacing: 0px;
         background-color: var(--primary);
-        border: 2px solid var(--white);
         border-radius: 8px;
-        font-weight: 600;
+        font-weight: 500;
+        border: 2px solid white;
     }
 
     .hero-btn button:hover {
@@ -908,7 +971,7 @@ footer p {
         background-color: var(--white);
         transition: 0.3s linear;
         cursor: pointer;
-        border: 2px solid var(--primary);
+        border: 1.5px solid var(--primary);
     }
 
     .hero-image {
@@ -929,6 +992,7 @@ footer p {
         /* grid-auto-rows: minmax(100px, auto); */
         gap: 3rem 1rem;
         overflow: hidden;
+        background-color: white;
     }
     
     .product-item-column {
@@ -938,13 +1002,12 @@ footer p {
     }
     
     .section-title {
-        padding: 2rem;
+        padding: 1.5rem;
     }
 
     .section-title h2 {
         font-size: 3rem;
         letter-spacing: 2px;
-        padding-top: 1rem;
     }
 
     .section-title p {
@@ -955,6 +1018,7 @@ footer p {
 
     .hero-btn {
         display: block;
+        margin-left: 0.5rem;
     }
 
     h1, h2 {
@@ -962,9 +1026,10 @@ footer p {
     }
 
     .contact-section {
-        height: 350px;
-        padding-left: 76px;
-        padding-top: 10px;
+        padding: 2rem 3rem;
+        margin: 4rem 5.5rem;
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+        border-radius: 8px;
     }
 }
 
@@ -976,8 +1041,8 @@ footer p {
 
 @media screen and (min-width: 1000px) {
     .products-container {
-        padding: 76px;
-        padding-top: 20px;
-        padding-bottom: 10px;
+        padding: 80px;
+        padding-top: 40px;
+        padding-bottom: 0px;
     }
 }

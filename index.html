@@ -17,6 +17,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <!-- Source Sans Pro font import -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap" rel="stylesheet">
 </head>
 <body onload="loadFun()">
     <div id="loading"></div>
@@ -48,8 +52,18 @@
           <!-- links -->
           <div class="links-container">
             <ul class="links">
-              <li>
-                <a href="#home" class="scroll-link">Home</a>
+              <li class="show-mobilee">
+                <a href="#home" class="scroll-link">Mobile</a>
+              </li>
+              <li class="show-deskk">
+                <div class="nav-desk-header">
+                    <a href="#home" class="no-hover" style="padding-right: 0.3rem;">
+                        <img src="./assets/icons/logo-primary.png" alt="logo" class="logo">
+                    </a>
+                    <span>
+                        <a href="#home" class="no-hover" style="color: rgba(0, 0, 0, 0.9); font-family: 'Source Sans Pro', sans-serif; padding-left: 0; font-size: 0.95rem";>Eero's Jewelry</a>
+                    </span>
+                </div>
               </li>
               <li>
                 <a href="#products" class="scroll-link">Products</a>
@@ -221,7 +235,7 @@
 
         <!-- Contact-section-Title -->
         <section id="contact" class="section">
-            <div class="section-title">
+            <div class="section-title" style="padding-top: 2rem">
                 <h2>Contact</h2>
                 <p>Section</p>
             </div>
@@ -229,14 +243,14 @@
             <!-- Contact -->
             <div class="contact-section">
                 <div class="contact-info">
-                    <p><strong>Email address</strong></p>
+                    <h4><strong>Email address</strong></h4>
                     <p>
                         <a href="mailto: eeros_Jewelry@outlook.com">eeros_Jewelry@outlook.com</a>
                     </p>
                 </div>
                 <div class="contact-order-section" id="order">
-                    <p><b>Ordering a Product</b></p>
-                    <p>Click on the button below to place a order.</p>
+                    <h4><b>Ordering a Product</b></h4>
+                    <p style="color: rgba(21, 21, 21, 0.85);">Click on the button below to place a order.</p>
                     <div class="contact-order-button">
                         <button onclick="displayOrderForm()">Order</button>
                     </div>
