@@ -108,6 +108,7 @@ footer a:hover {
     padding: 2.5em;
     padding-top: 40px;
     display: flex;
+    
 }
 
 .field {
@@ -161,27 +162,29 @@ footer a:hover {
     border-radius: 200px;
     border: none;
     width: 65%;
+    transition: 0.3s linear;
 }
 
 .section-title {
-    color: var(--white-header-text);
-    background-color: var(--black);
+    color: var(--black);
+    background-color: #ffffff;
     font-weight: 800;
     text-align: center;
     font-size: 2rem;
     padding: 1.2rem 0;
+    padding-bottom: 0.5rem;
 }
 
 
 
 .section-title h2 {
-    font-size: 2.2rem;
+    font-size: 2.5rem;
 }
 
 .section-title p {
-    color: var(--dark_text);
+    color: #232323c6;
     font-weight: 600;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     margin-bottom: 0;
 }
 
@@ -211,6 +214,7 @@ footer a:hover {
     border-radius: 1rem;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     text-align: center;
+    margin-top: 10px;
 }
 
 .product-image {
@@ -223,8 +227,7 @@ footer a:hover {
 }
 
 .product-image img {
-    border-radius: 1rem;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    border-radius: 8px;
 }
 
 .product-description {
@@ -232,13 +235,13 @@ footer a:hover {
 }
 
 .product-description h2 {
-    color: rgba(0, 0, 0, 0.8);
+    color: rgba(0, 0, 0, 0.9);
     font-weight: 700;
 }
 
 .product-description p {
     padding-top: 0.7rem;
-    color: #6f6f6fe0;
+    color: #3b3b3be0;
     font-size: 1rem;
     font-weight: 500;
 }
@@ -455,8 +458,6 @@ nav {
   }
 
   .links a:hover {
-    background-color: var(--brightPrimary);
-    padding-left: 2.2rem;
     color: rgba(0, 0, 0, 0.95);
     font-weight: 400;
   }
@@ -613,6 +614,11 @@ nav {
       margin-bottom: 20px;
     }
 
+    .contact-info p {
+        color: black;
+        font-size: 1.2rem;
+    }
+
     .order-modal-content {
         width: 90%;
         max-height: unset;
@@ -621,6 +627,10 @@ nav {
     .field {
         max-width: 75%;
         overflow: hidden;
+    }
+
+    .contact-order-button button {
+        margin-bottom: 0px;
     }
 }
 
@@ -747,6 +757,17 @@ footer p {
 @media(max-width: 768px) {
     .projects-grid-container {
         grid-template-columns: 1fr;
+    }
+
+    .section-title p {
+        margin-top: 5px;
+    }
+}
+
+
+@media screen and (min-width: 350px) and (max-width: 500px) {
+    .products-container {
+        padding: 0 1.5rem;
     }
 }
 
