@@ -11,29 +11,18 @@ navToggle.addEventListener('click', function(){
         linksContainer.style.height = `${linksHeight}px`;
     }
     else{
+        
         linksContainer.style.height = 0;
+
     }
 });
 
 
+
+
 const navbar = document.getElementById('nav');
 const topLink = document.querySelector('.top-link');
-// ********** fixed navbar ************
-// window.addEventListener('scroll', function(){
-//     const scrollHeight = window.pageYOffset;
-//     const navHeight = navbar.getBoundingClientRect().height;
-//     if(scrollHeight > navHeight) {
-//         navbar.classList.add('fixed-nav');
-//     } else {
-//         navbar.classList.remove('fixed-nav');
-//     }
 
-//     if(scrollHeight > 500) {
-//         topLink.classList.add('show-link');
-//     } else {
-//         topLink.classList.remove('show-link');
-//     }
-// });
 // ********** smooth scroll ************
 // select links
 const scrollLinks = document.querySelectorAll('.scroll-link');
@@ -64,4 +53,16 @@ scrollLinks.forEach(function(link){
         });
         linksContainer.style.height = 0;
     });
+});
+
+
+document.addEventListener('click', function handleClickOutsideBox(event) {
+    console.log('user clicked: ', event.target);
+    
+    const box = document.getElementById('box');
+    
+    if (!box.contains(event.target) && linksContainer.getBoundingClientRect().height !== 0) {
+    //   box.style.display = 'none';
+        linksContainer.style.height = 0;
+    }
 });
