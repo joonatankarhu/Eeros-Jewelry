@@ -56,6 +56,30 @@ scrollLinks.forEach(function(link){
 });
 
 
+// Link to exact height
+const scrollLinkss = document.querySelectorAll('.scroll-link');
+
+scrollLinkss.forEach(function(link) {
+    link.addEventListener('click', function(e) {
+        // prevent default
+        e.preventDefault();
+        // navigate to specific spot
+        const id = e.currentTarget.getAttribute('href').slice(1);
+        const element = document.getElementById(id);
+        // calculate the heights
+        const navHeight = navbar.getBoundingClientRect().height;
+        const containerHeight = linksContainer.getBoundingClientRect().height;
+        let position = element.offsetTop - navHeight;
+        
+        window.scrollTo({
+            left: 0,
+            top: position,
+        });
+        linksContainer.style.height = 0;
+    });
+});
+
+// Hide mobile nav links on outside clicks
 document.addEventListener('click', function handleClickOutsideBox(event) {
     console.log('user clicked: ', event.target);
     
