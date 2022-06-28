@@ -76,11 +76,10 @@
     }
 
     input[type=submit]:hover {
-        color: var(--primary);
-        background-color: var(--white);
+        color: white;
+        background-color: var(--primary);
         transition: 0.3s linear;
         cursor: pointer;
-        border: 2px solid var(--primary);
     }
 
     .links a:hover {
@@ -143,10 +142,12 @@ img {
 }
 
 footer a {
-    color: rgba(255, 255, 255, 0.676);
+    color: rgba(255, 255, 255, 0.5);
     text-decoration: underline;
     font-size: 0.75rem;
 }
+
+
 
 
 
@@ -302,7 +303,7 @@ footer a {
 .contact-section {
     display: block;
     font-size: 1rem;
-    padding: 2.5rem 2.75rem;
+    padding: 0.5rem 2.75rem;
 }
 
 
@@ -393,9 +394,8 @@ input[type=text], textarea {
   }
 
   input[type=submit] {
-    background-color: var(--primary);
+    background-color: black;
     color: var(--white);
-    border: 2px solid var(--white);
     padding: 10px 20px;
     font-size: 0.9rem;
     font-weight: 600;
@@ -403,6 +403,7 @@ input[type=text], textarea {
     cursor: pointer;
     -webkit-appearance: none;
     margin-top: 16px;
+    border: none;
 
   }
 
@@ -659,12 +660,13 @@ nav {
     }
 
     .contact-section {
+        padding-top: 1rem;
         padding-bottom: 3rem;
     }
     
     .contact-section h4 {
-        font-size: 1.2rem;
-        margin-bottom: 8px;
+        font-size: 1.4rem;
+        margin-bottom: 0px;
     }
 
     .contact-order-section {
@@ -680,27 +682,29 @@ nav {
 
 footer {
     background-color: black;
-    color: var(--secondary);
+    color: rgba(255, 255, 255, 0.5);
     text-align: center;
     padding: 1.4rem 2.75rem;
     font-size: 0.75rem;
 }
 
 footer h4 {
-    font-size: 1rem;
+    font-size: 0.9rem;
     color: white;
     margin-bottom: 10px;
+    font-weight: 300;
 }
 
 footer h4 a {
-    font-size: 0.85rem;
+    font-size: 0.9rem;
     color: white;
 }
 
 footer p {
-    font-weight: 100;
+    font-weight: 300;
     font-size: 0.75rem;
     margin-bottom: 0.5rem;
+    color: white;
 }
 
 /* --------------media queries-------------------- */
@@ -829,6 +833,7 @@ footer p {
 
     .products-container {
         padding: 3rem;
+        padding-bottom: 0;
     }
 }
 
@@ -849,7 +854,7 @@ footer p {
     }
 
     .contact-section h4 {
-        font-size: 1.3rem;
+        font-size: 1.5rem;
         margin-bottom: 5px;
     }
 
@@ -926,11 +931,11 @@ footer p {
     footer {
         text-align: left;
         padding: 2rem 75px;
-        font-size: 0.75rem;
+        font-size: 0.6rem;
     }
 
     footer a {
-        color: white;
+        color: rgba(255, 255, 255, 0.5);
     }
 
     
@@ -946,7 +951,7 @@ footer p {
 
     .contact-order-button button {
         max-width: 200px;
-        margin-top: 1rem;
+        margin-top: 0.2rem;
         background-color: var(--black);
         color: var(--white);
         font-weight: 600;
@@ -967,7 +972,7 @@ footer p {
         box-sizing: border-box;
         padding: 75px;
         padding-top: 50px;
-        padding-bottom: 50px;
+        padding-bottom: 30px;
     }
 
     .width-40 {
@@ -1076,6 +1081,7 @@ footer p {
         margin: 4rem 5.5rem;
         border-radius: 8px;
         margin-top: 2rem;
+        padding-top: 0;
     }
 }
 

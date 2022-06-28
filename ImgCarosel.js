@@ -13,3 +13,7 @@ function auto() {
        x=0;
     document.getElementById('bigImage').src=images[x];      
 }
+
+// set date
+const date = document.getElementById('date');
+date.innerHTML = new Date().getFullYear();
