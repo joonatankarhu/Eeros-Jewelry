@@ -157,7 +157,7 @@ footer a {
     height: 100%;
     width: 100%;
     color: rgb(0, 0, 0);
-    background-color: #f2eecb ;
+    background-color: white;
     flex-direction: column;
     margin: 0;
     padding: 2.5em;
@@ -620,7 +620,7 @@ nav {
     .contact-section {
         padding: 4rem 2.5rem;
         padding-bottom: 5rem;
-        background-color: var(--background);
+        background-color: white;
     }
     
     .contact-section h4 {
@@ -1017,6 +1017,7 @@ footer p {
         padding: 75px;
         padding-top: 50px;
         padding-bottom: 50px;
+        background-color: var(--background);
     }
 
     .width-40 {
@@ -1122,12 +1123,11 @@ footer p {
     }
 
     .contact-section {
-        padding: 4rem 3rem;
+        padding: 2rem 3rem;
         margin: 4rem 5.5rem;
-        margin-top: 4rem;
         border-radius: 8px;
-        margin-top: 2rem;
-        background-color: var(--background);
+        margin-top: 1rem;
+        background-color: white;
     }
 }
 
