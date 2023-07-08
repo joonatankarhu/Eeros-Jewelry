@@ -1,3 +1,5 @@
+# Practice project for frontend
+
 # Ecommerce site to sell products
 
 Find the project down below
